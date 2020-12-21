@@ -18,3 +18,6 @@ vplot <- ggplot(data = spearmandf)+geom_violin(aes(x = factor(Avg), y = Average)
 vplot + coord_flip()
 # 2D dot plot (standard deviation (y) vs average (x)), with added 2d density lines
 ps2 <- ggplot(spearmancorrelationsedited, aes(x = Average, y = S.D.))+ geom_point() + geom_density2d()
+
+#code foe violin plots to measure frequencies of acesssions w snps versus wild type in expression data
+ggplot(data = viodf)+geom_violin(aes(x = factor(Group), y = AverageZscore), adjust = .5,draw_quantiles = c(0.25, 0.5, 0.75))
